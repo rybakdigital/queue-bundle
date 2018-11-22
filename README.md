@@ -17,12 +17,15 @@ rybakdigital:queue:worker:do
 ```
 
 ## Examples
+
+```
 |-----------------------------------------------------------------------------------------
 |  id  | queue    | callable          | method      | options       | data           | ...
 |-----------------------------------------------------------------------------------------
 |  1   | main     | my.service        | process     | {"a":"b"}     | {"name":"foo"} |
 |  2   | my_queue | App\Class\Name    | generate    | {"foo":"bar"} | {"name":"foo"} |
 |  3   | main     | my.mailer.service | sendMessage | {"foo":"bar"} | {"name":"foo"} |
+```
 
 Execute task from named queue:
 ```
