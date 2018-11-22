@@ -1,0 +1,28 @@
+{
+    "name": "rybakdigital/queue-bundle",
+    "type": "symfony-bundle",
+    "description": "The Queue Bundle",
+    "keywords": ["queue", "symfony", "cron"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kris Rybak",
+            "email": "kris@krisrybak.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "doctrine/orm": "^2.6",
+        "symfony/dependency-injection": "^4.1",
+        "symfony/http-kernel": "^4.1",
+        "symfony/config": "^4.1",
+        "symfony/console": "^4.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    },
+    "autoload": {
+        "psr-4": { "RybakDigital\\QueueBundle\\": "" }
+    },
+    "minimum-stability": "dev"
+}

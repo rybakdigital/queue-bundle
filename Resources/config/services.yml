@@ -1,0 +1,23 @@
+services:
+  rybakdigital.queue.command.worker.do:
+    class: RybakDigital\QueueBundle\Command\QueueWorkerDoCommand
+    arguments: [ '@doctrine.orm.entity_manager', '@rybakdigital.queue.manager.task_manager' ]
+    tags:
+      - { name: 'console.command', command: 'rybakdigital:queue:worker:do' }
+
+  rybakdigital.queue.command.worker.book:
+    class: RybakDigital\QueueBundle\Command\QueueWorkerBookCommand
+    arguments: [ '@doctrine.orm.entity_manager' ]
+    tags:
+      - { name: 'console.command', command: 'rybakdigital:queue:worker:book' }
+
+  rybakdigital.queue.command.worker.rebook:
+    class: RybakDigital\QueueBundle\Command\QueueWorkerRebookCommand
+    arguments: [ '@doctrine.orm.entity_manager' ]
+    tags:
+      - { name: 'console.command', command: 'rybakdigital:queue:worker:rebook' }
+
+  rybakdigital.queue.manager.task_manager:
+    class: RybakDigital\QueueBundle\Manager\TaskManager
+    arguments: 
+      - '@service_container'
